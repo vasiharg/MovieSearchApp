@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Movie Search</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>MovieInfo</h1>
+    </header>
+    <div class="shadow">
+        <h2>Search For Any Movie</h2>
+        <div class="searchBox">
+            <form id="search" role="form" onsubmit="getInput(event)">
+                <input type="text" name="searchBar" placeholder="Search Movies. . . " >
+            </form>
+        </div>
+    </div>
+
+    <div id="searchResults" class="container">
+    </div>
+
+    <div id="template" class="movie-result">
+        <img class="movie-poster"/>
+        <p class="movie-title"></p>
+        <button onclick=""></button>        
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
