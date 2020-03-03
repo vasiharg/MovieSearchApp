@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Movie Search</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>MovieInfo</h1>
+    </header>
+    <div class="shadow">
+        <h2>Search For Any Movie</h2>
+        <div class="searchBox">
+            <form id="search" role="form" onsubmit="searchMovies(event)">
+                <input type="text" name="searchBar" placeholder="Search Movies. . . ">
+            </form>
+        </div>
+    </div>
+
+    <div id="searchResults" class="search-result-wrapper hidden">
+
+        <button class="arrow" onclick="shiftMovies(false)"><<</button>
+
+        <div class="container">
+            <div class="movie-result">
+                <img class="movie-poster" />
+                <p class="movie-title"></p>
+                <button onclick="displayDetails(this.id)">Details</button>
+            </div>
+
+            <div class="movie-result">
+                <img class="movie-poster" />
+                <p class="movie-title"></p>
+                <button onclick="displayDetails(this.id)">Details</button>
+            </div>
+
+            <div class="movie-result">
+                <img class="movie-poster" />
+                <p class="movie-title"></p>
+                <button onclick="displayDetails(this.id)">Details</button>
+            </div>
+
+            <div class="movie-result">
+                <img class="movie-poster" />
+                <p class="movie-title"></p>
+                <button onclick="displayDetails(this.id)">Details</button>
+            </div>
+
+        </div>
+        <button class="arrow" onclick="shiftMovies(true)">>></button>
+    </div>
+
+    <script type="text/javascript" src="assets/js/app.js"></script>
+
+</body>
+
+</html>
