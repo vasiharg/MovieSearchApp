@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Movie Search</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>MovieInfo</h1>
+    </header>
+    <div class="shadow">
+        <h2>Search For Any Movie</h2>
+        <div class="searchBox">
+            <form id="search">
+                <input id="searchInput" type="text" name="searchBar" placeholder="Search Movies. . . ">
+            </form>
+        </div>
+    </div>
+
+    <div class="search-result-wrapper">
+        <!--<button class="arrow" onclick="shiftMovies(false)"><<</button>-->
+
+        <div id="searchResults" class="container">
+        
+        </div>
+        <!--<button class="arrow" onclick="shiftMovies(true)">>></button>-->
+    </div>
+
+    <div class="modal">
+        <div id="movieDetailsModal" class="modal-content">
+            <span class="close">&times;</span>
+        </div>
+    </div>
+
+</body>
+
+</html>
