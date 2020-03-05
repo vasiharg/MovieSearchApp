@@ -64,6 +64,29 @@ h2{
     text-align: center;
 }
 
+.movie-details {
+    display: flex;
+}
+
+.movie-details img {
+    margin-right: 20px;
+    max-width: 30%;
+}
+
+.movie-details-title {
+    margin: 8px 0;
+}
+
+.movie-details-info {
+    background-color: #c5c5c5;
+    padding: 10px 20px;
+}
+
+.movie-details-plot {
+    margin-top: 40px;
+}
+
+
 .movie-poster {
     max-width: 100%;
 }
@@ -89,7 +112,8 @@ h2{
 
 /* Modal Content */
 .modal-content {
-  background-color: #fefefe;
+    color: black;
+  background-color: lightgray;
   margin: auto;
   padding: 20px;
   border: 1px solid #888;
