@@ -3,7 +3,10 @@
 import { elements } from './base';
 
 export const clearMovieDetailsModal = () => {
-    elements.movieDetailsModal.innerHTML = '';
+    console.log(elements.movieDetailsModalContent.children)
+    elements.movieDetailsModalContent.children[1].remove();
+    elements.movieDetailsModalContent.children[0].remove();
+    elements.movieDetailsModal.style.display = "none";
 }
 
 export const renderMovieDetailsModel = movieDetails => {
@@ -32,5 +35,6 @@ export const renderMovieDetailsModel = movieDetails => {
         </div>
     `;
   
-    elements.movieDetailsModal.insertAdjacentHTML('beforeend', markup);
+    elements.movieDetailsModalContent.insertAdjacentHTML('afterbegin', markup);
+    elements.movieDetailsModal.style.display = "block";
 };

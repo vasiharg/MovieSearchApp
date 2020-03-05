@@ -8,20 +8,16 @@ import * as movieDetailsView from './views/movieDetailsView';
 
 import { elements } from './views/base';
 
-const searchResultsContainer = document.getElementById('searchResults');
-const movieResultsBoxes = Array.from(document.getElementsByClassName('movie-result'));
-
-// console.dir(movieResultsBoxes);
-let currentSearchResults;
-
-let currentMovieIndex = 0;
-
 const state = {};
 
 elements.searchForm.onsubmit = (event) => {
     event.preventDefault(); // prevent submitting the form and thus reloading page
     searchMovies()
 };
+
+elements.movieDetailsModalCloseButton.onclick = () => {
+    movieDetailsView.clearMovieDetailsModal();
+}
 
 const searchMovies = async () => {
 
@@ -53,21 +49,11 @@ const searchMovies = async () => {
 
 }
 
-function shiftMovies(right) {
-    currentMovieIndex += right ? 4 : -4;
-
-    // reached first movie in the results
-    if (currentMovieIndex < 0) {
-        currentMovieIndex = 0;
-    }
-    // next shift will reach max so we display last 4
-    if (currentMovieIndex + 4 >= currentSearchResults.length) {
-        currentMovieIndex = currentSearchResults.length - 4;
-    }
-}
-
 const getMovieDetails = async () => {
     const id = window.location.hash.replace('#id=', '');
+    
+    window.location.hash = '';
+
     try {
         await state.movies[id].fetchMovieDetails()
         console.log(id)
